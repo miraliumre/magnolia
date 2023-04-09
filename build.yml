@@ -1,0 +1,23 @@
+metadata:
+  vendor: Miralium Research
+  name: Magnolia
+  version: v0.01
+
+# The PCI Vendor ID and Device ID values might require changes in order
+# for the Option ROM to be properly loaded in some environments.
+pci:
+  vendor: 0x0
+  device: 0x0
+  class: 0
+  subclass: 0
+  interface: 0
+
+modules:
+
+  - name: floppybird
+    path: src/games/floppybird
+    type: src
+
+  - name: pcspeaker
+    path: src/tools/pcspeaker
+    type: src
