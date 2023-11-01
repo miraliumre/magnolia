@@ -30,6 +30,12 @@ load_floppybird:
     restore_view
     ret
 
+load_pillman:
+    load_module EMB_PILLMAN_SIZE, EMB_PILLMAN
+    call set_video_mode
+    restore_view
+    ret
+
 load_pcspeaker:
     load_module EMB_PCSPEAKER_SIZE, EMB_PCSPEAKER
     restore_view
