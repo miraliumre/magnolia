@@ -40,11 +40,15 @@ MENU_HELP_STR_TOOLS       db 'The Tools menu contains utilities', 0x0A
 
 ; ---------------------------------------------------------------------
 
-MENU_GAMES                db 2    ; Menu length (in items)
+MENU_GAMES                db 3    ; Menu length (in items)
 
                           dw MENU_STR_FLOPPYBIRD
                           dw MENU_HELP_STR_FLOPPYBIRD
                           dw load_floppybird
+
+                          dw MENU_STR_PILLMAN
+                          dw MENU_HELP_STR_PILLMAN
+                          dw load_pillman
 
                           dw MENU_STR_BACK
                           dw MENU_HELP_STR_BACK
@@ -53,6 +57,10 @@ MENU_GAMES                db 2    ; Menu length (in items)
 MENU_STR_FLOPPYBIRD       db 'Floppy Bird', 0x00
 MENU_HELP_STR_FLOPPYBIRD  db 'Play a clone of the infamous Flappy', 0x0A
                           db 'Bird game.', 0x00
+
+MENU_STR_PILLMAN          db 'Pillman', 0x00
+MENU_HELP_STR_PILLMAN     db 'Play a clone of PAC-MAN', 0x0A
+                          db 'Classical game.', 0x00
 
 ; ---------------------------------------------------------------------
 
