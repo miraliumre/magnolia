@@ -40,6 +40,10 @@ The following features are available on the latest release of Magnolia.
 
 - **Floppy Bird:** A clone of the Flappy Bird game, written in assembly
    by [Mihail Szabolcs][floppy-bird].
+  
+- **Pillman:** A clone of the Pac-Man game, written in assembly
+   by [nanochess][Pillman].
+
 
 ### Tools
 
@@ -112,6 +116,7 @@ on the GitHub repository, and we will get back to you as soon as
 possible.
 
 [floppy-bird]: https://github.com/icebreaker/floppybird
+[Pillman]: https://github.com/nanochess/Pillman
 [issues]: https://github.com/miraliumre/magnolia/issues
 [license]: LICENSE.txt
 [mdump]: https://github.com/Theldus/AMI_BIOS_CodeInjection/tree/main/tools/mdump
