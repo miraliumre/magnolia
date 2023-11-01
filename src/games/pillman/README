@@ -1,0 +1,73 @@
+
+ ______   __     __         __         __    __     ______     __   __    
+/\  == \ /\ \   /\ \       /\ \       /\ "-./  \   /\  __ \   /\ "-.\ \   
+\ \  _-/ \ \ \  \ \ \____  \ \ \____  \ \ \-./\ \  \ \  __ \  \ \ \-.  \  
+ \ \_\    \ \_\  \ \_____\  \ \_____\  \ \_\ \ \_\  \ \_\ \_\  \ \_\\"\_\ 
+  \/_/     \/_/   \/_____/   \/_____/   \/_/  \/_/   \/_/\/_/   \/_/ \/_/ 
+                                                                          
+
+Pillman game in 512 bytes (boot sector or COM file)
+by Oscar Toledo G. Jul/08/2019
+
+http://nanochess.org
+https://github.com/nanochess
+
+This a game about a yellow man eating pills in 512 bytes. It can be
+run as a COM file or put into a boot sector of a floppy disk to be
+run.
+
+Move with arrow keys, press Esc to exit (only COM file).
+
+It's compatible with 8088 (the original IBM PC). So you now have
+to look for a 8-bit compatible VGA card if you want to run it over
+original hardware ;)
+
+A small video of the game running under emulation:
+
+  https://www.youtube.com/watch?v=ALBgsXOq11o
+
+If you want to assemble it, you must download the Netwide Assembler
+(nasm) from www.nasm.us
+
+Use this command line:
+
+  nasm -f bin pillman.asm -Dcom_file=1 -o pillman.com
+  nasm -f bin pillman.asm -Dcom_file=0 -o pillman.img
+
+Tested with VirtualBox for Mac OS X running Windows XP running this
+game, it also works with DosBox and probably with qemu:
+
+  qemu-system-x86_64 -fda pillman.img
+
+Enjoy it!
+
+
+>> THE BOOK <<        
+
+Do you would like more details on the inner workings? This program
+is fully commented in my new book Programming Boot Sector Games
+and you'll also find a 8086/8088 crash course!
+
+Now available from Lulu:
+
+  Soft-cover
+    http://www.lulu.com/shop/oscar-toledo-gutierrez/programming-boot-sector-games/paperback/product-24188564.html
+
+  Hard-cover
+    http://www.lulu.com/shop/oscar-toledo-gutierrez/programming-boot-sector-games/hardcover/product-24188530.html
+
+  eBook
+    https://nanochess.org/store.html
+
+These are some of the example programs documented profusely
+in the book:
+
+  * Guess the number.
+  * Tic-Tac-Toe game.
+  * Text graphics.
+  * Mandelbrot set.
+  * F-Bird game.
+  * Invaders game.
+  * Pillman game.
+  * Toledo Atomchess.
+  * bootBASIC language.
