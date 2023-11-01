@@ -21,3 +21,7 @@ modules:
   - name: pcspeaker
     path: src/tools/pcspeaker
     type: src
+    
+  - name: pillman
+    path: src/games/pillman
+    type: src
