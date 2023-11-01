@@ -10,10 +10,9 @@ directly from a computer's BIOS.
 
 ### Compatibility notice
 
-Please note that Magnolia has been specifically designed and developed
-for use with legacy BIOS and not UEFI. It is important to be aware that
-we have not tested Magnolia on UEFI systems, and there are currently no
-plans to support UEFI in the foreseeable future.
+Despite being designed and developed specifically for use with legacy BIOS, Magnolia is UEFI compatible.
+Currently, UEFI can load and execute OpROM from legacy BIOS when the Compatibility Support Module (CSM) is enabled.
+There are no plans to support native UEFI in the near future.
 
 ### Disclaimer
 
