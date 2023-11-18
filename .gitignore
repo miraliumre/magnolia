@@ -1,5 +1,6 @@
+!.gitkeep
 bin/*
 src/autogen/*
 src/games/floppybird/bin/*
 src/tools/pcspeaker/bin/*
-!.gitkeep
+venv/*
