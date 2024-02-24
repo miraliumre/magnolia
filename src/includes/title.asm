@@ -1,6 +1,7 @@
 title_draw:
     pusha
-    
+
+    xor bx, bx
     mov si, TITLE_DATA
 
     lodsb
