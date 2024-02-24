@@ -1,7 +1,7 @@
 metadata:
   vendor: Miralium Research
   name: Magnolia
-  version: v0.01
+  version: v0.02
 
 # The PCI Vendor ID and Device ID values might require changes in order
 # for the Option ROM to be properly loaded in some environments.
