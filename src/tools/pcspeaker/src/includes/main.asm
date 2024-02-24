@@ -1,6 +1,9 @@
-str_title       db 'PC Speaker Test', 0x00
-str_wait        db 'Press P to play or ESC to exit', 0x00
-str_playing     db 'Playing... Press ESC to stop  ', 0x00
+DEFAULT_ATTR_TITLE db 00001111b
+DEFAULT_ATTR_TEXT  db 00000111b
+
+STR_TITLE          db 'PC Speaker Test', 0x00
+STR_WAIT           db 'Press P to play or ESC to exit', 0x00
+STR_PLAYING        db 'Playing... Press ESC to stop  ', 0x00
 
 main:
     call clear_screen
@@ -9,17 +12,17 @@ main:
     xor dx, dx
     call set_cursor_position
 
-    mov bl, 00001111b
-    mov si, str_title
+    mov bl, DEFAULT_ATTR_TITLE
+    mov si, STR_TITLE
     call print_a
 
     inc dh
-    mov bl, 00000111b
+    mov bl, DEFAULT_ATTR_TEXT
 
     .wait:
         call set_cursor_position
 
-        mov si, str_wait
+        mov si, STR_WAIT
         call print_a
 
         call read_key
@@ -35,7 +38,7 @@ main:
     .play:
         call set_cursor_position
 
-        mov si, str_playing
+        mov si, STR_PLAYING
         call print_a
 
         mov si, tune

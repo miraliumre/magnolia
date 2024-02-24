@@ -61,7 +61,7 @@ play_tune:
     .loop:
         mov ah, 0x01
         int 0x16                  ; Get status of the keyboard buffer
-        jnz .key_event             ; and handle if user has pressed a key
+        jnz .key_event            ; and handle if user has pressed a key
 
         lodsw
         mov bx, ax                ; Load note to BX
