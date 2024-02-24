@@ -1,5 +1,5 @@
-DEFAULT_ATTR_TITLE db 00001111b
-DEFAULT_ATTR_TEXT  db 00000111b
+DEFAULT_ATTR_TITLE equ 00001111b
+DEFAULT_ATTR_TEXT  equ 00000111b
 
 STR_TITLE          db 'PC Speaker Test', 0x00
 STR_WAIT           db 'Press P to play or ESC to exit', 0x00
