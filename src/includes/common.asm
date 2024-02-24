@@ -1,6 +1,6 @@
-DEFAULT_ATTR_TEXT  equ 00000111b
 DEFAULT_ATTR_TITLE equ 00001111b
 DEFAULT_ATTR_HLGHT equ 01110000b
+DEFAULT_ATTR_TEXT  equ 00000111b
 
 %macro prepare_area 4
     mov ch, %1
@@ -48,6 +48,8 @@ hide_cursor:
 ;
     push ax
     push cx
+    xor ax, ax
+    xor cx, cx
     mov ah, 0x01
     mov ch, 0x01
     int 0x10
@@ -151,6 +153,52 @@ show_cursor:
     int 0x10
     pop cx
     pop ax
+    ret
+
+read_key:
+;
+; reads a key press
+;
+; OUTPUT:
+;     AH = key scan code
+;     AL = ascii character
+;
+    mov ah, 0x00
+    int 0x16
+    ret
+
+read_keyboard_buffer:
+;
+; read the keyboard buffer status
+;
+; OUTPUT:
+;     AH = key scan code
+;     AL = ascii character
+;     ZF = clear if keystroke is available, else clear
+;
+    mov ah, 0x01
+    int 0x16
+    ret
+
+reboot:
+;
+; reboots the system
+;
+    cli
+    mov al, 0xFE
+    out 0x64, al
+    hlt
+
+sleep:
+;
+; sleeps for a specified interval in microseconds 
+;
+; INPUT:
+;     CX = microseconds (high)
+;     DX = microseconds (low)
+;
+    mov ah, 0x86
+    int 0x15
     ret
 
 write_a:

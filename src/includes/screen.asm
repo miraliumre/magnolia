@@ -7,15 +7,11 @@ SCREEN_ATTR_TITLE equ DEFAULT_ATTR_TITLE
 
 SCREEN_MAIN       db 'Welcome!', 0x00
 
-                  db 'Explore the potential of games and tools '
-                  db 'available directly through your', 0x0A
-                  db `computer's BIOS.`, 0x0A, 0x0A
-                  db 'Magnolia is open source software. We invite you '
-                  db 'to join our growing', 0x0A
-                  db 'community of contributors on GitHub, where you '
-                  db 'can help us expand and ', 0x0A
-                  db 'refine this project: '
-                  db 'https://github.com/miraliumre/magnolia', 0x00
+                  db 'Magnolia is an open source platform that brings '
+                  db 'applications directly to', 0x0A,
+                  db `your PC's BIOS! Visit our repository on GitHub:`,
+                  db 0x0A, 'https://github.com/miraliumre/magnolia',
+                  db 0x00
 
 SCREEN_GAMES      db 'Games', 0x00
 

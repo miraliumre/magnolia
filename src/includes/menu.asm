@@ -30,13 +30,10 @@ MENU_MAIN                 db 3    ; Menu length (in items)
                           dw 0
 
 MENU_STR_GAMES            db 'Games ', 0xAF, 0x00
-MENU_HELP_STR_GAMES       db 'Enter the Games menu to discover', 0x0A
-                          db 'games that can run from Magnolia.', 0x00
+MENU_HELP_STR_GAMES       db 'Run games.', 0x00
 
 MENU_STR_TOOLS            db 'Tools ', 0xAF, 0x00
-MENU_HELP_STR_TOOLS       db 'The Tools menu contains utilities', 0x0A
-                          db 'to help interact with and diagnose', 0x0A
-                          db `your computer's hardware.`, 0x00
+MENU_HELP_STR_TOOLS       db 'Run general utilities.', 0x00
 
 ; ---------------------------------------------------------------------
 
@@ -51,8 +48,7 @@ MENU_GAMES                db 2    ; Menu length (in items)
                           dw 0
 
 MENU_STR_FLOPPYBIRD       db 'Floppy Bird', 0x00
-MENU_HELP_STR_FLOPPYBIRD  db 'Play a clone of the infamous Flappy', 0x0A
-                          db 'Bird game.', 0x00
+MENU_HELP_STR_FLOPPYBIRD  db 'A clone of the Flappy Bird game.', 0x00
 
 ; ---------------------------------------------------------------------
 
@@ -67,8 +63,8 @@ MENU_TOOLS                db 2    ; Menu length (in items)
                           dw 0
 
 MENU_STR_PCSPEAKER        db 'PC Speaker Test', 0x00
-MENU_HELP_STR_PCSPEAKER   db 'Start a program that plays a simple', 0x0A
-                          db 'une via the onboard PC Speaker.', 0x00
+MENU_HELP_STR_PCSPEAKER   db 'Play a simple tune through the', 0x0A
+                          db 'onboard PC Speaker.', 0x00
 
 ; ---------------------------------------------------------------------
 
@@ -76,11 +72,10 @@ MENU_STR_TITLE            db 'Menu', 0x00
 MENU_HELP_STR_TITLE       db 'Help', 0x00
 
 MENU_STR_BACK             db 'Back', 0x00
-MENU_HELP_STR_BACK        db 'Go back to the previous menu.', 0x00
+MENU_HELP_STR_BACK        db 'Return to the previous menu.', 0x00
 
 MENU_STR_EXIT             db 'Exit', 0x00
-MENU_HELP_STR_EXIT        db 'Exit Magnolia and return to normal', 0x0A
-                          db 'system operation.', 0x00
+MENU_HELP_STR_EXIT        db 'Reboot the PC.', 0x00
 
 ; ---------------------------------------------------------------------
 
